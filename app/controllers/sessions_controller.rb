@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
         redirect_to "/places"
       else
         # 4b. if the user doesn't know their password -> login fails
-        flash["notice"] = "Nope."
+        flash["notice"] = "Wrong password"
         redirect_to "/login"
       end
     else
