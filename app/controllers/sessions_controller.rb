@@ -14,12 +14,12 @@ class SessionsController < ApplicationController
         redirect_to "/places"
       else
         # 4b. if the user doesn't know their password -> login fails
-        flash["notice"] = "Wrong password"
+        flash["notice"] = "Incorrect username and/or password"
         redirect_to "/login"
       end
     else
       # 4a. if the user doesn't exist -> login fails
-      flash["notice"] = "User does not exist"
+      flash["notice"] = "Incorrect username and/or password"
       redirect_to "/login"
     end
   end
